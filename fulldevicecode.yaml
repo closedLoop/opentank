@@ -1,0 +1,175 @@
+esphome:
+  name: watertank1
+  friendly_name: WaterTank1
+  on_boot:
+    - priority: 900
+      then:
+        - lambda: |-
+            gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
+            gpio_set_direction(GPIO_NUM_3, GPIO_MODE_OUTPUT);
+            gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
+            gpio_set_level(GPIO_NUM_2, 0);
+            gpio_set_level(GPIO_NUM_3, 1);
+            gpio_set_level(GPIO_NUM_4, 1);
+            gpio_hold_en(GPIO_NUM_2);
+            gpio_hold_en(GPIO_NUM_3);
+            gpio_hold_en(GPIO_NUM_4);
+            ESP_LOGI("twin", "js turned on sensor power");
+  on_shutdown:
+    - priority: 500
+      then:
+        - lambda: |-
+            id(wts).update();
+
+deep_sleep:
+  run_duration:
+    default: 90s
+    gpio_wakeup_reason: 90s
+  sleep_duration: 30min
+  id: deepsleep
+  esp32_ext1_wakeup:
+    pins:
+      - 0
+    mode: ANY_LOW
+    
+globals:
+  - id: lastreading
+    type: uint16_t
+    restore_value: false
+    initial_value: "65535"
+
+binary_sensor:
+  - platform: status
+    name: "Status"
+  - platform: homeassistant
+    name: "OTA mode"
+    id: otamode
+    entity_id: input_boolean.watertank1_ota_mode
+  - platform: homeassistant
+    name: "Enable charging"
+    id: charging
+    entity_id: input_boolean.watertank1_charging
+
+button:
+  - platform: restart
+    name: "Restart"
+    
+interval:
+  - interval: 30s
+    then:
+      - lambda: |-
+          uint16_t sigma = id(wts).get_raw_state();
+          if (id(otamode).state) {
+            ESP_LOGI("twin", "hurry up bruh im tired");
+            id(deepsleep).prevent_deep_sleep();    
+          } else if(abs(sigma - id(lastreading)) > 10) {
+            ESP_LOGI("twin", "this shi still changing, not gonna sleep");
+            id(deepsleep).prevent_deep_sleep();
+          } else {
+            ESP_LOGI("twin", "prolly gonna sleep soon");
+            id(deepsleep).allow_deep_sleep();
+          }
+          id(lastreading) = sigma;
+          if (isnan(id(bat).get_state()) == 0) {
+            if (id(charging).state == 0 && id(bat).get_state() > 3300) {
+              ESP_LOGI("twin", "charging disabled type shi");
+              gpio_hold_dis(GPIO_NUM_15);
+              gpio_set_direction(GPIO_NUM_15, GPIO_MODE_OUTPUT);
+              gpio_set_level(GPIO_NUM_15, 1);
+              gpio_hold_en(GPIO_NUM_15);
+            } else {
+              ESP_LOGI("twin", "charging enabled type shi");
+              gpio_hold_dis(GPIO_NUM_15);
+              gpio_set_direction(GPIO_NUM_15, GPIO_MODE_INPUT);
+              gpio_hold_en(GPIO_NUM_15);
+            }
+          }
+
+esp32:
+  board: esp32-c6-devkitc-1
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+  level: DEBUG
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: !secret watertank1__encryption_key
+ota:
+  - platform: esphome
+    password: !secret watertank1__ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+web_server:
+
+i2c:
+  sda: GPIO19
+  scl: GPIO18
+  sda_pullup_enabled: false
+  scl_pullup_enabled: false
+  scan: false
+  setup_priority: 600
+  frequency: 100kHz
+
+i2c_device:
+  id: ads1115
+  address: 0x49
+
+sensor:
+  - platform: template
+    name: "Water tank sensor"
+    id: wts
+    lambda: |-
+      uint16_t raw_conversion;
+      id(ads1115).write_byte_16(0x01, 0x44B2);
+      delay(10);
+      id(ads1115).read_byte_16(0x00, &raw_conversion);
+      uint16_t lower_bound = 0;
+      if (raw_conversion - 20 >= 0) {
+        lower_bound = raw_conversion - 20;
+      }
+      id(ads1115).write_byte_16(0x02, lower_bound);
+      uint16_t upper_bound = 32767;
+      if (raw_conversion + 20 <= 32767) {
+        upper_bound = raw_conversion + 20;
+      }
+      id(ads1115).write_byte_16(0x03, upper_bound);
+      return raw_conversion;
+    filters:
+      - lambda: return x / 17.60;
+    unit_of_measurement: "mm"
+    update_interval: 30s
+
+  - platform: template
+    name: "Charging current"
+    id: chg
+    lambda: |-
+      uint16_t raw_conversion;
+      id(ads1115).write_byte_16(0x01, 0x66E3);
+      delay(10);
+      id(ads1115).read_byte_16(0x00, &raw_conversion);
+      return raw_conversion;
+    filters:
+      - lambda: return x / 35.20;
+    unit_of_measurement: "mA"
+    update_interval: 30s
+
+  - platform: template
+    name: "Battery voltage"
+    id: bat
+    lambda: |-
+      uint16_t raw_conversion;
+      id(ads1115).write_byte_16(0x01, 0x74E3);
+      delay(10);
+      id(ads1115).read_byte_16(0x00, &raw_conversion);
+      return raw_conversion;
+    filters:
+      - lambda: return x / 8.00;
+    unit_of_measurement: "mV"
+    update_interval: 30s

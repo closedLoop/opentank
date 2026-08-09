@@ -1,0 +1,91 @@
+template:
+  - variables:
+      Roses_mm: '{{8}}'
+      Lawn1_mm: '{{8}}'
+      Lawn2_mm: '{{8}}'
+      Tankmmperrainmm: '{{5}}'
+    triggers:
+      trigger: time
+      at: "7:00:00"
+    sensor:
+      - name: "Rainfall scaling value"
+        state: >-
+          {% if as_timestamp(now()) | int(0) > as_timestamp(input_datetime.time_for_which_scaling_value_is_active) | int(0) %}
+              {% if states(sensor.rain_water) / Tankmmperrainmm | float(0) > max(Roses_mm, Lawn1_mm, Lawn2_mm) %}
+                {{ 0 }}
+              {% else % }
+                {{ 100 - (100 * ((states(sensor.rain_water) / Tankmmperrainmm | float(0)) / max(Roses_mm, Lawn1_mm, Lawn2_mm))) }}
+              {% endif %}
+          {% endif %}
+  - variables:
+      Roses_tankmm: '{{200}}'
+      Lawn1_tankmm: '{{940}}'
+      Lawn2_tankmm: '{{240}}'
+      Roses_fr: '{{5}}'
+      Lawn1_fr: '{{22}}'
+      Lawn2_fr: '{{5}}'
+    triggers:
+      trigger: time
+      at: "7:10:00"
+    sensor:
+      - name: "Roses watering time"
+        state: >-
+          {% if states('sensor.watertank1_water_tank_sensor') | int(0) > ((Roses_tankmm + Lawn1_tankmm + Lawn2_tankmm) * states('input_number.rainfall_scaling_value') | int(0) / 100) %}
+            {{ (Roses_tankmm / Roses_fr) * states('input_number.rainfall_scaling_value') | int(0) / 100}}
+          {% else %}
+            {{ (states('sensor.watertank1_water_tank_sensor') | int(0) / (Roses_tankmm + Lawn1_tankmm + Lawn2_tankmm)) * (Roses_tankmm / Roses_fr) * (states('input_number.rainfall_scaling_value') | int(0) / 100)}}
+          {% endif %}
+      - name: "Lawn 1 watering time"
+        state: >-
+          {% if states('sensor.watertank1_water_tank_sensor') | int(0) > ((Roses_tankmm + Lawn1_tankmm + Lawn2_tankmm) * states('input_number.rainfall_scaling_value') | int(0) / 100) %}
+            {{ (Lawn1_tankmm / Lawn1_fr) * states('input_number.rainfall_scaling_value') | int(0) / 100}}
+          {% else %}
+            {{ (states('sensor.watertank1_water_tank_sensor') | int(0) / (Roses_tankmm + Lawn1_tankmm + Lawn2_tankmm)) * (Lawn1_tankmm / Lawn1_fr) * (states('input_number.rainfall_scaling_value') | int(0) / 100)}}
+          {% endif %}
+      - name: "Lawn 2 watering time"
+        state: >-
+          {% if states('sensor.watertank1_water_tank_sensor') | int(0) > ((Roses_tankmm + Lawn1_tankmm + Lawn2_tankmm) * states('input_number.rainfall_scaling_value') | int(0) / 100) %}
+            {{ (Lawn2_tankmm / Lawn2_fr) * states('input_number.rainfall_scaling_value') | int(0) / 100}}
+          {% else %}
+            {{ (states('sensor.watertank1_water_tank_sensor') | int(0) / (Roses_tankmm + Lawn1_tankmm + Lawn2_tankmm)) * (Lawn2_tankmm / Lawn2_fr) * (states('input_number.rainfall_scaling_value') | int(0) / 100)}}
+          {% endif %}
+  - triggers:
+      trigger: state
+      entity_id: sensor.workshop_watertank1_level_derivative
+    conditions:
+      - or:
+          - and:
+              - condition: template
+                value_template: "{{ (as_timestamp(now()) | int(0) -as_timestamp(states.switch.shelly1pmg3_48f6ee811338.last_changed))|int(0) < 300 and states('switch.shelly1pmg3_48f6ee811338') == 'off'}}"
+              - condition: numeric_state
+                entity_id: "sensor.workshop_watertank1_level_derivative"
+                above: 0
+          - and:
+              - condition: numeric_state
+                entity_id: "sensor.workshop_watertank1_level_derivative"
+                above: 0
+              - condition: state
+                entity_id: "switch.shelly1pmg3_48f6ee811338"
+                state: "on"
+    sensor:
+      - name: "Water Tank Pump Filling"
+        state: "{{ states('sensor.workshop_watertank1_level_derivative') | float(0) / 2 }}"
+        unique_id: skibidirizzgyatt
+  - triggers:
+      trigger: state
+      entity_id: sensor.workshop_watertank1_level_derivative
+    conditions:
+      - and:
+          - condition: template
+            value_template: "{{ not (as_timestamp(now()) | int(0) -as_timestamp(states.switch.shelly1pmg3_48f6ee811338.last_changed))|int(0) < 300 and states('switch.shelly1pmg3_48f6ee811338') == 'off'}}"
+          - and:
+              - condition: numeric_state
+                entity_id: "sensor.workshop_watertank1_level_derivative"
+                above: 0.25
+              - condition: state
+                entity_id: "switch.shelly1pmg3_48f6ee811338"
+                state: "off"
+    sensor:
+      - name: "Water Tank Rain Filling"
+        state: "{{ states('sensor.workshop_watertank1_level_derivative') | float(0) / 2 }}"
+        unique_id: skibidirizzsigma
