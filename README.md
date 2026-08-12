@@ -8,7 +8,7 @@ https://youtu.be/-s6jZ4U3TzU
 
 ![OpenTank PCB isometric 3D render](assets/images/pcb-isometric.png)
 
-The render now uses portable KiCad-library models instead of machine-local CAD paths. Where an exact manufacturer model was unavailable, the image uses a visualization-grade package match; confirm critical mechanical geometry against the component datasheet before enclosure or assembly release. The TH1 solder-wire footprint intentionally has no fitted component body.
+The render now uses repository-local models instead of machine-local CAD paths. U12 uses Espressif's exact manufacturer STEP model; J1, J2, and the previously missing small packages use footprint-aligned, datasheet-sized visualization models documented in [`assets/3d/README.md`](assets/3d/README.md). Confirm connector details and enclosure fit with exact manufacturer CAD before assembly release. The TH1 solder-wire footprint intentionally has no fitted component body.
 
 ### PCB top view
 

@@ -1379,7 +1379,7 @@
 			(uuid "e0aa50bc-f3aa-4abe-877a-dd155529384f")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_SON.3dshapes/X2SON-8_1.4x1mm_P0.35mm.step"
+		(model "${KIPRJMOD}/assets/3d/TLV803EA29DPW.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2258,7 +2258,7 @@
 			(uuid "1e74a416-1ecb-4f20-b19e-7e027f59d9fc")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
+		(model "${KIPRJMOD}/assets/3d/TPS22916YFP.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2855,7 +2855,7 @@
 			(uuid "48f3877e-7683-4495-b928-7bbe6372278d")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
+		(model "${KIPRJMOD}/assets/3d/TPS61099YFF.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3506,7 +3506,7 @@
 			(uuid "07fe65e6-0631-449f-b2ab-d5e2dbb43ed9")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/UQFN-10_1.4x1.8mm_P0.4mm.step"
+		(model "${KIPRJMOD}/assets/3d/ADS1115RUG.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10448,15 +10448,15 @@
 			(uuid "9039f785-fb01-47d3-acd6-a475f38e031d")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/RF_Module.3dshapes/ESP32-C3-WROOM-02U.step"
+		(model "${KIPRJMOD}/assets/3d/ESP32-C6-MINI-1U.STEP"
 			(offset
-				(xyz 0 2.5 0)
+				(xyz -6.749 -1.515 0)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 0 0)
 			)
 		)
 	)
@@ -15684,7 +15684,7 @@
 			(uuid "4cfbfd16-4709-44e4-b63e-b4eb38723740")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
+		(model "${KIPRJMOD}/assets/3d/TPS7A2050YCK.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -19483,9 +19483,9 @@
 			(uuid "dc5cb58f-c25f-4498-b43e-b97c000e6b63")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MPT-0,5-12-2.54_1x12_P2.54mm_Horizontal.step"
+		(model "${KIPRJMOD}/assets/3d/Phoenix_1792960.step"
 			(offset
-				(xyz 0 2.055 0)
+				(xyz 0 0 0)
 			)
 			(scale
 				(xyz 1 1 1)
@@ -22480,7 +22480,7 @@
 			(uuid "ab08e370-159b-427b-858b-ef417c3c1870")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm.step"
+		(model "${KIPRJMOD}/assets/3d/TLV9004RUC.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -23057,7 +23057,7 @@
 			(uuid "192eacaa-d59e-4bd9-95d2-67b939486d30")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm.step"
+		(model "${KIPRJMOD}/assets/3d/TMUX1511RSV.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25320,7 +25320,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
+		(model "${KIPRJMOD}/assets/3d/GT-USB-7051A.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -26974,7 +26974,7 @@
 			(uuid "e10b9658-c197-42a8-b607-d9a6fb5faa7a")
 		)
 		(embedded_fonts no)
-		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
+		(model "${KIPRJMOD}/assets/3d/TPS22916YFP.step"
 			(offset
 				(xyz 0 0 0)
 			)
