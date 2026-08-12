@@ -12,7 +12,7 @@ actual KiCad schematic, PCB, and current manufacturer data.
   440 mA instead of approximately 910 mA.
 - U6 and U11 metadata now consistently identify the real, orderable
   TPS22916CYFPR and link the TPS22916 datasheet.
-- U13 and U14 metadata now links the Diodes Incorporated LXS0102 datasheet,
+- U13 and U14 metadata now link the Diodes Incorporated LXS0102 datasheet,
   matching the populated MPN.
 - U1 pin 1 is identified as VT/Test and remains intentionally unconnected.
 - The overlapping U4 VOUT zones now have distinct priorities.
