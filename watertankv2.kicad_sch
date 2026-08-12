@@ -6697,7 +6697,7 @@
 					)
 				)
 			)
-			(property "Footprint" "QFN40P180X260X55-16N"
+			(property "Footprint" "TMUX1511RSVR:QFN40P180X260X55-16N"
 				(at 26.67 -87.3 0)
 				(effects
 					(font
@@ -7046,7 +7046,7 @@
 				)
 			)
 		)
-		(symbol "TPS22915CYFPR:TPS22915CYFPR"
+		(symbol "TPS22916CYFPR:TPS22916CYFPR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -7058,7 +7058,7 @@
 					)
 				)
 			)
-			(property "Value" "TPS22915CYFPR"
+			(property "Value" "TPS22916CYFPR"
 				(at 0 5.842 0)
 				(effects
 					(font
@@ -7066,7 +7066,7 @@
 					)
 				)
 			)
-			(property "Footprint" "BGA4C40P2X2_75X75X50"
+			(property "Footprint" "TPS22916CYFPR:BGA4C40P2X2_75X75X50"
 				(at 24.13 -94.92 0)
 				(effects
 					(font
@@ -7076,7 +7076,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/gpn/tps22915"
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22916.pdf"
 				(at 24.13 -194.92 0)
 				(effects
 					(font
@@ -7086,7 +7086,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "5.5V, 2A, 38m Load Switch With Quick Output Discharge"
+			(property "Description" "1V to 5.5V, 2A, 60mOhm ultra-low-leakage load switch"
 				(at -33.02 21.336 0)
 				(effects
 					(font
@@ -7115,7 +7115,7 @@
 					(hide yes)
 				)
 			)
-			(property "Manufacturer_Part_Number" "TPS22915CYFPR"
+			(property "Manufacturer_Part_Number" "TPS22916CYFPR"
 				(at 24.13 -594.92 0)
 				(effects
 					(font
@@ -7125,7 +7125,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Part Number" "595-TPS22915CYFPR"
+			(property "Mouser Part Number" "595-TPS22916CYFPR"
 				(at 24.13 -694.92 0)
 				(effects
 					(font
@@ -7135,7 +7135,7 @@
 					(hide yes)
 				)
 			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS22915CYFPR/?qs=asCBFxFfL1Q0T7V4xVNeNQ%3D%3D"
+			(property "Mouser Price/Stock" "https://www.mouser.com/ProductDetail/Texas-Instruments/TPS22916CYFPR"
 				(at 24.13 -794.92 0)
 				(effects
 					(font
@@ -7145,7 +7145,7 @@
 					(hide yes)
 				)
 			)
-			(property "Arrow Part Number" "TPS22915CYFPR"
+			(property "Arrow Part Number" "TPS22916CYFPR"
 				(at 24.13 -894.92 0)
 				(effects
 					(font
@@ -7155,7 +7155,7 @@
 					(hide yes)
 				)
 			)
-			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/tps22915cyfpr/texas-instruments"
+			(property "Arrow Price/Stock" "https://www.arrow.com/en/products/tps22916cyfpr/texas-instruments"
 				(at 24.13 -994.92 0)
 				(effects
 					(font
@@ -7165,7 +7165,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "TPS22915CYFPR_1_1"
+			(symbol "TPS22916CYFPR_1_1"
 				(rectangle
 					(start -6.35 3.81)
 					(end 6.35 -3.81)
@@ -7473,7 +7473,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://www.slkoric.com/upload/file/20250103/DW03.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -7687,7 +7687,7 @@
 					)
 				)
 			)
-			(property "Footprint" "BGA4C35P2X2_62X62X33"
+			(property "Footprint" "TPS7A2050PYCKR:BGA4C35P2X2_62X62X33"
 				(at 21.59 -94.92 0)
 				(effects
 					(font
@@ -7910,7 +7910,7 @@
 				(pin no_connect line
 					(at 8.89 6.35 180)
 					(length 2.54)
-					(name "NC"
+					(name "VT"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -13516,7 +13516,7 @@
 		)
 		(uuid "1327f9e3-a5cd-4357-ba55-a86dcec67d99")
 	)
-	(label "D_N"
+	(label "D_P"
 		(at 262.255 40.64 0)
 		(fields_autoplaced yes)
 		(effects
@@ -13549,7 +13549,7 @@
 		)
 		(uuid "18bf85ca-01a6-466a-a93f-50cb2f3f79d7")
 	)
-	(label "19"
+	(label "18"
 		(at 172.085 145.415 180)
 		(fields_autoplaced yes)
 		(effects
@@ -13670,7 +13670,7 @@
 		)
 		(uuid "33cf84db-6073-4675-95db-33d3c6755077")
 	)
-	(label "D_P"
+	(label "D_N"
 		(at 262.255 43.18 0)
 		(fields_autoplaced yes)
 		(effects
@@ -14429,7 +14429,7 @@
 		)
 		(uuid "e2ec63b8-0fbd-447b-8edf-ea39eb6f53f7")
 	)
-	(label "18"
+	(label "19"
 		(at 172.085 142.875 180)
 		(fields_autoplaced yes)
 		(effects
@@ -14714,7 +14714,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330"
+		(property "Value" "681"
 			(at 83.439 48.895 0)
 			(effects
 				(font
@@ -14741,7 +14741,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "RES 330 OHM 1% 1/16W 0402"
+		(property "Description" "RES 681 OHM 1% 1/16W 0402; sets BQ25185 charge current to approximately 440mA"
 			(at 81.915 47.625 0)
 			(effects
 				(font
@@ -14750,7 +14750,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "RC0402FR-07330RL"
+		(property "MPN" "RC0402FR-07681RL"
 			(at 81.915 47.625 0)
 			(effects
 				(font
@@ -15349,7 +15349,7 @@
 		)
 	)
 	(symbol
-		(lib_id "TPS22915CYFPR:TPS22915CYFPR")
+		(lib_id "TPS22916CYFPR:TPS22916CYFPR")
 		(at 82.55 69.215 0)
 		(mirror y)
 		(unit 1)
@@ -15374,7 +15374,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA4C40P2X2_75X75X50"
+		(property "Footprint" "TPS22916CYFPR:BGA4C40P2X2_75X75X50"
 			(at 58.42 164.135 0)
 			(effects
 				(font
@@ -15384,7 +15384,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/tps22915"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22916.pdf"
 			(at 58.42 264.135 0)
 			(effects
 				(font
@@ -16979,7 +16979,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA4C35P2X2_62X62X33"
+		(property "Footprint" "TPS7A2050PYCKR:BGA4C35P2X2_62X62X33"
 			(at 95.25 205.41 0)
 			(effects
 				(font
@@ -17764,7 +17764,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/txs0102"
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/LXS0102.pdf"
 			(at 125.73 114.173 0)
 			(effects
 				(font
@@ -21264,7 +21264,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/txs0102"
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/LXS0102.pdf"
 			(at 125.73 84.328 0)
 			(effects
 				(font
@@ -25221,7 +25221,7 @@
 		)
 	)
 	(symbol
-		(lib_id "TPS22915CYFPR:TPS22915CYFPR")
+		(lib_id "TPS22916CYFPR:TPS22916CYFPR")
 		(at 89.535 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -25245,7 +25245,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BGA4C40P2X2_75X75X50"
+		(property "Footprint" "TPS22916CYFPR:BGA4C40P2X2_75X75X50"
 			(at 113.665 282.88 0)
 			(effects
 				(font
@@ -25255,7 +25255,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/gpn/tps22915"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22916.pdf"
 			(at 113.665 382.88 0)
 			(effects
 				(font
@@ -26931,7 +26931,7 @@
 				)
 			)
 		)
-		(property "Footprint" "QFN40P180X260X55-16N"
+		(property "Footprint" "TMUX1511RSVR:QFN40P180X260X55-16N"
 			(at 51.435 237.795 0)
 			(effects
 				(font
