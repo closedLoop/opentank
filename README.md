@@ -8,6 +8,8 @@ https://youtu.be/-s6jZ4U3TzU
 
 ![OpenTank PCB isometric 3D render](assets/images/pcb-isometric.png)
 
+The render now uses portable KiCad-library models instead of machine-local CAD paths. Where an exact manufacturer model was unavailable, the image uses a visualization-grade package match; confirm critical mechanical geometry against the component datasheet before enclosure or assembly release. The TH1 solder-wire footprint intentionally has no fitted component body.
+
 ### PCB top view
 
 ![OpenTank PCB top copper and silkscreen](assets/images/pcb-top.svg)
@@ -19,6 +21,22 @@ https://youtu.be/-s6jZ4U3TzU
 ### Schematic
 
 ![OpenTank circuit schematic](assets/images/schematic.svg)
+
+## Changes versus `main`
+
+These comparisons use matching KiCad layers, scale, and sheet coordinates. Magenta marks geometry present only on `main` (removed or moved), green marks geometry present only on this branch (added or moved), and gray provides unchanged context.
+
+### PCB top comparison
+
+![OpenTank PCB top view compared with main](assets/images/diffs/pcb-top-vs-main.png)
+
+### PCB bottom comparison
+
+![OpenTank PCB bottom view compared with main](assets/images/diffs/pcb-bottom-vs-main.png)
+
+### Schematic comparison
+
+![OpenTank schematic compared with main](assets/images/diffs/schematic-vs-main.png)
 
 ## Important note
 

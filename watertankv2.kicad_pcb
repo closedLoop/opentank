@@ -1379,7 +1379,7 @@
 			(uuid "e0aa50bc-f3aa-4abe-877a-dd155529384f")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/TLV803EA29DPWR/TLV803EA29DPWR.stp"
+		(model "${KICAD8_3DMODEL_DIR}/Package_SON.3dshapes/X2SON-8_1.4x1mm_P0.35mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2258,7 +2258,7 @@
 			(uuid "1e74a416-1ecb-4f20-b19e-7e027f59d9fc")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/LIB_TPS22915CYFPR/TPS22915CYFPR/3D/TPS22915CYFPR.stp"
+		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2855,7 +2855,7 @@
 			(uuid "48f3877e-7683-4495-b928-7bbe6372278d")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/LIB_TPS61099YFFR/TPS61099YFFR/3D/TPS61099YFFR.stp"
+		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3506,7 +3506,7 @@
 			(uuid "07fe65e6-0631-449f-b2ab-d5e2dbb43ed9")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/ADS1115IRUGR/ADS1115IRUGR.step"
+		(model "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/UQFN-10_1.4x1.8mm_P0.4mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3514,7 +3514,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -10448,7 +10448,7 @@
 			(uuid "9039f785-fb01-47d3-acd6-a475f38e031d")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/LIB_ESP32-C6-MINI-1U-N4/ESP32-C6-MINI-1U-N4/3D/ESP32-C6-MINI-1U-N4.stp"
+		(model "${KICAD8_3DMODEL_DIR}/RF_Module.3dshapes/ESP32-C3-WROOM-02U.step"
 			(offset
 				(xyz 0 2.5 0)
 			)
@@ -10456,7 +10456,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -12867,7 +12867,7 @@
 			(uuid "60cfacc5-78fe-408c-af83-2478b6516311")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/TPS631010YBGR/TPS631010YBGR.step"
+		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-8_0.705x1.468mm_Layout2x4_P0.4mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -12875,7 +12875,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -13673,7 +13673,7 @@
 			(uuid "f6745cd9-fba5-4c5d-a905-8464cb030a92")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/LIB_74404043010A/74404043010A/3D/74404043010A.stp"
+		(model "${KICAD8_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Wuerth_LQFS-4828.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -15684,7 +15684,7 @@
 			(uuid "4cfbfd16-4709-44e4-b63e-b4eb38723740")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/LIB_TPS7A2050PYCKR/TPS7A2050PYCKR/3D/TPS7A2050PYCKR.stp"
+		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -19483,7 +19483,7 @@
 			(uuid "dc5cb58f-c25f-4498-b43e-b97c000e6b63")
 		)
 		(embedded_fonts no)
-		(model "C:/Users/haase/OneDrive - UniSQ/Documents/KiCad/watertankv2/1792960_3D/1792960.stp"
+		(model "${KICAD8_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MPT-0,5-12-2.54_1x12_P2.54mm_Horizontal.step"
 			(offset
 				(xyz 0 2.055 0)
 			)
@@ -22480,7 +22480,7 @@
 			(uuid "ab08e370-159b-427b-858b-ef417c3c1870")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/TLV9004IRUCR/TLV9004IRUCR.step"
+		(model "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -22488,7 +22488,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -23057,7 +23057,7 @@
 			(uuid "192eacaa-d59e-4bd9-95d2-67b939486d30")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/LIB_TMUX1511RSVR/TMUX1511RSVR/3D/TMUX1511RSVR.stp"
+		(model "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25320,7 +25320,7 @@
 			)
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/USB4120_03_C/USB4120-03-C.STEP"
+		(model "${KICAD8_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25328,7 +25328,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
@@ -26974,7 +26974,7 @@
 			(uuid "e10b9658-c197-42a8-b607-d9a6fb5faa7a")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/LIB_TPS22915CYFPR/TPS22915CYFPR/3D/TPS22915CYFPR.stp"
+		(model "${KICAD8_3DMODEL_DIR}/Package_BGA.3dshapes/Texas_DSBGA-6_0.757x1.01mm_Layout2x3_P0.35mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -27706,7 +27706,7 @@
 			(uuid "74e5e3c2-c86b-4206-b48d-cb3e3e88dcd7")
 		)
 		(embedded_fonts no)
-		(model "G:/My Drive/watertankv2/BQ25185DLHR--3DModel-STEP-269445.STEP"
+		(model "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/Texas_DLH0010A_WSON-10-1EP_2.2x2mm_P0.4mm_EP0.9x1.5mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -27714,7 +27714,7 @@
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz -90 0 0)
+				(xyz 0 0 0)
 			)
 		)
 	)
