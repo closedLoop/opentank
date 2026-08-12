@@ -16,9 +16,16 @@ actual KiCad schematic, PCB, and current manufacturer data.
   matching the populated MPN.
 - U1 pin 1 is identified as VT/Test and remains intentionally unconnected.
 - The overlapping U4 VOUT zones now have distinct priorities.
-
-The USB and U17 crossovers use 0.30 mm / 0.10 mm F.Cu-to-In1.Cu microvias.
-Fabricator support for laser microvias must be confirmed before ordering.
+- The USB data routing no longer changes copper layers. U16 is rotated to let
+  D+/D- pass around the USB-C connector's peg keepout and D_P/D_N reach the
+  ESP32-C6 as an F.Cu differential pair without vias.
+- D_P and D_N are length tuned to 13.191 mm and 13.192 mm respectively, for
+  0.001 mm routed skew. The shorter U16-to-connector paths are 4.770 mm and
+  5.440 mm and remain entirely on F.Cu.
+- A dedicated USB net class sets 0.127 mm trace width and 0.150 mm differential
+  gap. These values target the board's recorded F.Cu-to-In1.Cu stackup; retain
+  a continuous In1.Cu ground reference and include a 90-ohm differential
+  impedance requirement in the PCB fabrication order.
 
 ## Audit claims not applied
 
