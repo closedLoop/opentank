@@ -10,8 +10,8 @@ actual KiCad schematic, PCB, and current manufacturer data.
   and `fulldevicecode.yaml`.
 - R4 is 681 ohms, which programs the BQ25185 charge current to approximately
   440 mA instead of approximately 910 mA.
-- U6 and U11 metadata now consistently identifies the real, orderable
-  TPS22916CYFPR and links the TPS22916 datasheet.
+- U6 and U11 metadata now consistently identify the real, orderable
+  TPS22916CYFPR and link the TPS22916 datasheet.
 - U13 and U14 metadata now links the Diodes Incorporated LXS0102 datasheet,
   matching the populated MPN.
 - U1 pin 1 is identified as VT/Test and remains intentionally unconnected.
